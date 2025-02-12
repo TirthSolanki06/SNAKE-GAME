@@ -1,8 +1,8 @@
 # Snake Game in C++
-1.Created By: Code Mavericks
-     Team Members : 1.Tirth Solanki
-		                2.Darpan Sherathiya
-		                3.Deep Shobhashana
+1.Created By: Code Mavericks Team ,
+     Team Members : 1.Tirth Solanki ,
+		    2.Darpan Sherathiya ,
+		    3.Deep Shobhashana , 
                     4.Shaurya Singh Shekhawat
 
 ## 2. Brief Overview
