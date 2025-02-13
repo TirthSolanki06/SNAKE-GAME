@@ -2,12 +2,11 @@
 #include <conio.h> 
 #include <cstdlib> 
 #include <ctime> 
-#include <chrono>
 #include <windows.h>     
 using namespace std;
 
-const int height = 30;
-const int width = 100;
+const int height = 20;
+const int width = 80;
 //declaring and intializing all variables
 class snake {
 private:
@@ -18,12 +17,12 @@ private:
     int barrierX, barrierY;
     int specialFoodCounter = 0;
 
-    char direction;
-    bool gameover;
+      bool gameover;
 
 
 public:
     int score=0;
+    char direction;
     void generateRandom(int &posX, int &posY) {
     posX = rand() % (width-2)+1;
     posY = rand() % (height-2)+1;
@@ -40,7 +39,9 @@ public:
 
 //printing the board
     void draw() {
-    system("cls");
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        COORD cursorPos = {0, 0}; 
+        SetConsoleCursorPosition(hConsole, cursorPos);
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
@@ -107,6 +108,18 @@ public:
             case 'x':
                 gameover = true;
                 break;
+            case 75: 
+                if (direction != 'R') direction = 'L'; 
+                break; 
+            case 77: 
+                if (direction != 'L') direction = 'R'; 
+                break; 
+            case 72:
+                if (direction != 'D') direction = 'U'; 
+                break; 
+            case 80: 
+                if (direction != 'U') direction = 'D'; 
+                break;
             
             }
         }
@@ -132,6 +145,7 @@ public:
             newhead.second++; 
             break;
         }
+        
 
         // Checking the collision with walls
         if (newhead.first == 0 || newhead.first == width - 1 || newhead.second == 0 || newhead.second == height-1||(newhead.first == barrierX && newhead.second == barrierY)) {
@@ -187,10 +201,11 @@ public:
 
 void HideCursor()
 {
+    HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cursorInfo;
     cursorInfo.bVisible = false;
     cursorInfo.dwSize = 1;
-    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
+    SetConsoleCursorInfo(console, &cursorInfo);
 }
 
 int main() {
@@ -201,9 +216,11 @@ int main() {
         game.draw();
         game.input();
         game.logic();
-        Sleep(100);
+        Sleep(30);
         HideCursor();
-    }
+    
+
+}
 
     cout << "Game Over And Final Score: " << game.score << endl;
     return 0;
