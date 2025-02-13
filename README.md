@@ -14,17 +14,11 @@ This project is a **console-based Snake Game** written in C++. The game involves
 - **Poisonous Food (`X`)**: Reduces the score.
 - **Barrier (`#`)**: Acts as an obstacle, causing **Game Over** upon collision.
 - **Real-time User Input**: Control the snake using `WASD` keys.
-- **Game Over Condition**: Collision with a wall, the barrier, or itself ends the game.
-
----
-   2.Created By: Code Mavericks
-     Team Members : 1.Tirth Solanki
-		    2.Darpan Sherathiya
-		    3.Deep Shobhashana
-        4.Shaurya Singh Shekhawat			
+- **Game Over Condition**: Collision with a wall, the barrier, or itself ends the
+- 			
 ## 3. Detailed Explanation
 
-### 2.1 Game Rules
+### 3.1 Game Rules
 - The snake moves continuously in the last set direction.
 - The goal is to eat **food (`@`)** to grow the snake and increase the score.
 - After every **5 foods**, a **special food (`$`)** appears, giving **+3 points**.
@@ -46,7 +40,7 @@ This project is a **console-based Snake Game** written in C++. The game involves
 
 ## 4. Code Explanation
 
-### 3.1 Class `snake`
+### 4.1 Class `snake`
 The game is structured using an **object-oriented approach** with the `snake` class, which manages:
 - **Snake movement**
 - **Food and obstacle generation**
@@ -73,7 +67,7 @@ The game runs in a **while loop**:
 
 ## 5. Compilation & Execution
 
-### 4.1 Requirements
+### 5.1 Requirements
 - **C++ Compiler** (`g++` for Windows/Linux/macOS)
 - **Windows** (`conio.h` for `_kbhit()` and `_getch()`)
 - **For Linux/macOS**, use `termios` to replace `conio.h`
