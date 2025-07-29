@@ -105,4 +105,41 @@ The game runs in a **while loop**:
 
 ---
 
+## 📚 8. Documentation
+
+### 📖 Complete API Documentation
+For comprehensive technical documentation, usage examples, and integration guides, please refer to:
+
+- **[📋 API Documentation](API_DOCUMENTATION.md)** - Complete API reference with detailed descriptions, parameters, return values, and examples for all public functions and components
+- **[🔧 Class Reference](CLASS_REFERENCE.md)** - In-depth technical documentation of the `snake` class, including internal algorithms, memory management, and architectural details  
+- **[💡 Usage Examples](USAGE_EXAMPLES.md)** - Comprehensive usage examples, integration patterns, customization guides, and advanced implementation scenarios
+
+### 📖 Quick Reference
+
+#### Core APIs
+- `snake()` - Constructor for game initialization
+- `void draw()` - Renders the game board and all elements
+- `void input()` - Processes keyboard input for movement
+- `void logic()` - Updates game state and handles collisions
+- `bool isgameover()` - Checks if the game has ended
+- `void generateRandom(int&, int&)` - Generates random positions
+
+#### Public Properties
+- `int score` - Current game score (read-only access)
+- `char direction` - Current snake movement direction
+
+#### Utility Functions
+- `void HideCursor()` - Hides console cursor for better display
+- `int main()` - Main game loop and program entry point
+
+### 🎯 Documentation Features
+- **Complete API Coverage**: Every public function and component documented
+- **Practical Examples**: Real-world usage scenarios and code snippets
+- **Integration Guides**: How to extend and customize the game
+- **Performance Tips**: Optimization strategies and best practices
+- **Cross-Platform Notes**: Platform-specific considerations
+- **Error Handling**: Safe usage patterns and debugging techniques
+
+---
+
 ### 🏆 Developed by **Team Code Mavericks**  
